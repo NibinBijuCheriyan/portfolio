@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIBIN - Access Granted</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%2300ff00' d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z'/%3E%3C/svg%3E" type="image/svg+xml">
+</head>
+<body>
+    <div class="login-container">
+        <div class="terminal-header">
+            <span class="terminal-title">ACCESS_PROTOCOL_INITIATED</span>
+            <div class="terminal-buttons">
+                <span class="close-button"></span>
+                <span class="minimize-button"></span>
+                <span class="maximize-button"></span>
+            </div>
+        </div>
+        <div class="terminal-body">
+            <p>> Connecting to secure server...</p>
+            <p>> Authenticating user: <span class="green-text">nibin.biju.cheriyan</span></p>
+            <p>> Enter decryption key:</p>
+            <input type="password" id="passwordInput" class="terminal-input" placeholder="********">
+            <button id="loginButton" class="terminal-button">INITIATE_LOGIN</button>
+            <p id="statusMessage" class="status-message"></p>
+        </div>
+    </div>
+
+    <div id="loadingScreen" class="loading-screen">
+        <div class="spinner"></div>
+        <p class="loading-text">DECRYPTING_DATA...</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
