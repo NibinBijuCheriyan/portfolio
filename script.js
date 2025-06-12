@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
         function attemptLogin() {
             const enteredPassword = passwordInput.value.trim().toLowerCase();
 
-            if (enteredPassword ) {
+            while (enteredPassword) {
                 statusMessage.style.color = '#00ff00';
                 statusMessage.textContent = '> AUTHENTICATION_SUCCESSFUL. REDIRECTING...';
                 loadingScreen.style.display = 'flex'; // Show loading screen
@@ -27,11 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 setTimeout(() => {
                     window.location.href = 'portfolio.html'; // Redirect to portfolio page
                 }, 3000); // Simulate loading for 3 seconds
-            } else {
-                statusMessage.style.color = '#ff5f56';
-                statusMessage.textContent = '> ACCESS_DENIED. INVALID_KEY.';
-                passwordInput.value = ''; // Clear input
-            }
+            } 
         }
     }
 });
