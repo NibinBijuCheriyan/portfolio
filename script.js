@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
         function attemptLogin() {
             const enteredPassword = passwordInput.value.trim().toLowerCase();
 
-            if (enteredPassword === correctPassword) {
+            if (enteredPassword ) {
                 statusMessage.style.color = '#00ff00';
                 statusMessage.textContent = '> AUTHENTICATION_SUCCESSFUL. REDIRECTING...';
                 loadingScreen.style.display = 'flex'; // Show loading screen
